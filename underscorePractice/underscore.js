@@ -63,6 +63,7 @@ var customers = [{
 // Create and array of all email addresses
 // first without using underscore's pluck, then with it.
 
+const emails = _.pluck(customers, "email")
 
 
 
@@ -75,8 +76,7 @@ var inviteList2 = ['Jake', 'Mildred', 'Jimmy', 'Ed', 'Franklin']
   // Create one list of the people we want at the party (no duplicates).
   // Then remove all duplicates using _.union().
 
-
-
+const noDups = _.union(inviteList1, inviteList2)
 
 
 
@@ -85,7 +85,11 @@ var inviteList2 = ['Jake', 'Mildred', 'Jimmy', 'Ed', 'Franklin']
   var friendsOfBetty = ['Burt', 'Dave', 'Tina', 'Biggie', 'Rex', 'Carina', 'Victoria', 'Tom', 'Nancy'];
 
 
-  // Jim and Betty are having a party, but they only want to invite mutual friends. Create and array of mutual friends. First without using underscore, then using underscores _.intersection().
+  // Jim and Betty are having a party, but they only want to invite mutual friends. 
+  // Create and array of mutual friends. First without using underscore, then using 
+  // underscores _.intersection().
+
+  const theTwo = _.intersection(friendsOfJim, friendsOfBetty)
 
 
 var purchases = [{
@@ -109,6 +113,8 @@ var purchases = [{
 
 // First, group the purchases by company without underscore
 // then do it again using _.groupBy()
+
+const theGroups = _.groupBy(purchases, "company")
 
 
 
